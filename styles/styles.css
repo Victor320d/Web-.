@@ -1,0 +1,137 @@
+/* ====================== ШАПКА ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Верхняя полоска */
+.top-header {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.top-header a.shop-now {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* Основная шапка */
+.main-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.menu-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: #db4444;
+}
+
+/* Правая часть */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Поиск */
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 16px 10px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+/* Иконки */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icon-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #db4444;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
