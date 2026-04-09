@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exclusive</title>
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header></header>
-    <img src="" alt="">
-    
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header>
+        <!-- Верхняя тонкая полоска (акция) -->
+        <div class="top-header">
+            <div class="container">
+                <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
+                   <a href="#" class="shop-now">Shop Now</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Основная шапка -->
+        <div class="main-header">
+            <div class="container">
+                
+                <!-- Логотип -->
+                <a href="index.html" class="logo">Exclusive</a>
+
+                <!-- Меню -->
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="index.html" class="menu-link">Home</a></li>
+                        <li><a href="#" class="menu-link">Contact</a></li>
+                        <li><a href="#" class="menu-link">About</a></li>
+                        <li><a href="#" class="menu-link">Sign Up</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Поиск + иконки -->
+                <div class="header-right">
+                    
+                    <!-- Поиск (исправлено: теперь настоящая лупа) -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="What are you looking for?" id="search-input">
+                        <button type="button" class="search-btn">
+                            <!-- Встроенная иконка лупы (не зависит от файлов) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Иконки справа -->
+                    <div class="header-icons">
+                        <a href="#" class="icon-link">
+                            <img src="images/heart small.svg" alt="Wishlist" width="28">
+                        </a>
+                        <a href="#" class="icon-link cart-icon">
+                            <img src="images/Cart1 with buy.svg" alt="Cart" width="28">
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <img src="images/Account.jpg" alt="Account" width="32" style="border-radius: 50%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ============================================== -->
+
+    <!-- Здесь будет основной контент страницы -->
+    <main>
+        
+    </main>
+
 </body>
 </html>
