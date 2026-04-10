@@ -1,4 +1,4 @@
-/* ====================== ШАПКА ====================== */
+/* ====================== ОБЩИЕ СТИЛИ ====================== */
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +16,24 @@ body {
     padding: 0 20px;
 }
 
+/* ====================== ШАПКА ====================== */
+
 /* Верхняя полоска */
 .top-header {
     background-color: #000;
     color: #fff;
     font-size: 14px;
     padding: 12px 0;
-    text-align: center;
+}
+
+.top-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header p {
+    margin: 0;
 }
 
 .top-header a.shop-now {
@@ -30,6 +41,72 @@ body {
     text-decoration: underline;
     margin-left: 8px;
     font-weight: 600;
+}
+
+/* ====================== ЯЗЫК (по клику) ====================== */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-current {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 28px 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    outline: none;
+}
+
+.language-current:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.language-dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Выпадающий список */
+.language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 120px;
+    z-index: 100;
+    margin-top: 4px;
+}
+
+.language-dropdown.active .language-options {
+    display: block;
+}
+
+.language-option {
+    display: block;
+    padding: 10px 16px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language-option:hover {
+    background-color: #db4444;
+    color: #fff;
 }
 
 /* Основная шапка */
@@ -111,7 +188,6 @@ body {
 }
 
 .icon-link {
-    position: relative;
     display: flex;
     align-items: center;
 }

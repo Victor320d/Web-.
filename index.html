@@ -12,12 +12,27 @@
 
     <!-- ==================== ШАПКА ==================== -->
     <header>
-        <!-- Верхняя тонкая полоска (акция) -->
+        <!-- Верхняя тонкая полоска (акция + язык) -->
         <div class="top-header">
-            <div class="container">
+            <div class="container top-header-container">
+                
+                <!-- Текст акции -->
                 <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
                    <a href="#" class="shop-now">Shop Now</a>
                 </p>
+
+                <!-- Кастомный переключатель языка (теперь по клику) -->
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-current" id="languageButton">
+                        English 
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="language-options" id="languageOptions">
+                        <a href="#" class="language-option" data-lang="en">English</a>
+                        <a href="#" class="language-option" data-lang="ru">Русский</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -41,11 +56,10 @@
                 <!-- Поиск + иконки -->
                 <div class="header-right">
                     
-                    <!-- Поиск (исправлено: теперь настоящая лупа) -->
+                    <!-- Поиск -->
                     <div class="search-bar">
                         <input type="text" placeholder="What are you looking for?" id="search-input">
                         <button type="button" class="search-btn">
-                            <!-- Встроенная иконка лупы (не зависит от файлов) -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -53,7 +67,7 @@
                         </button>
                     </div>
 
-                    <!-- Иконки справа -->
+                    <!-- Иконки -->
                     <div class="header-icons">
                         <a href="#" class="icon-link">
                             <img src="images/heart small.svg" alt="Wishlist" width="28">
@@ -62,9 +76,6 @@
                             <img src="images/Cart1 with buy.svg" alt="Cart" width="28">
                             <span class="cart-count">0</span>
                         </a>
-                        <a href="#" class="icon-link">
-                            <img src="images/Account.jpg" alt="Account" width="32" style="border-radius: 50%;">
-                        </a>
                     </div>
                 </div>
             </div>
@@ -72,10 +83,35 @@
     </header>
     <!-- ============================================== -->
 
-    <!-- Здесь будет основной контент страницы -->
-    <main>
-        
-    </main>
+    <main></main>
+
+    <!-- Скрипт для открытия/закрытия языка по клику -->
+    <script>
+        const dropdown = document.getElementById('languageDropdown');
+        const button = document.getElementById('languageButton');
+        const options = document.getElementById('languageOptions');
+
+        // Открытие/закрытие по клику
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+        });
+
+        // Выбор языка
+        options.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                const selectedLang = this.textContent;
+                button.innerHTML = `${selectedLang} <span class="arrow">▼</span>`;
+                dropdown.classList.remove('active');
+            });
+        });
+
+        // Закрытие при клике вне меню
+        document.addEventListener('click', function() {
+            dropdown.classList.remove('active');
+        });
+    </script>
 
 </body>
 </html>
