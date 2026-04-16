@@ -4,114 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusive</title>
-    
-    <!-- Подключаем стили -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-    <!-- ==================== ШАПКА ==================== -->
-    <header>
-        <!-- Верхняя тонкая полоска (акция + язык) -->
-        <div class="top-header">
-            <div class="container top-header-container">
-                
-                <!-- Текст акции -->
-                <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
-                   <a href="#" class="shop-now">Shop Now</a>
-                </p>
-
-                <!-- Кастомный переключатель языка (теперь по клику) -->
-                <div class="language-dropdown" id="languageDropdown">
-                    <button class="language-current" id="languageButton">
-                        English 
-                        <span class="arrow">▼</span>
-                    </button>
-                    <div class="language-options" id="languageOptions">
-                        <a href="#" class="language-option" data-lang="en">English</a>
-                        <a href="#" class="language-option" data-lang="ru">Русский</a>
-                    </div>
-                </div>
-
+    <!-- TOP HEADER -->
+    <header class="top-header">
+        <div class="container top-header-container">
+            <p class="sale-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
+                <a href="#" class="shop-now">Shop Now</a>
+            </p>
+            
+            <div class="language-switcher">
+                <button id="language-btn" class="language-current">
+                    English 
+                    <span class="arrow">▼</span>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Основная шапка -->
-        <div class="main-header">
-            <div class="container">
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Exclusive</a>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="menu-link">Home</a></li>
+                    <li><a href="#" class="menu-link">Contact</a></li>
+                    <li><a href="#" class="menu-link">About</a></li>
+                    <li><a href="#" class="menu-link">Sign Up</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="What are you looking for?">
+                    <button class="search-btn">
+                        <img src="images/icon-send.jpg" alt="Search" width="24">
+                    </button>
+                </div>
                 
-                <!-- Логотип -->
-                <a href="index.html" class="logo">Exclusive</a>
-
-                <!-- Меню -->
-                <nav class="nav">
-                    <ul class="menu">
-                        <li><a href="index.html" class="menu-link">Home</a></li>
-                        <li><a href="#" class="menu-link">Contact</a></li>
-                        <li><a href="#" class="menu-link">About</a></li>
-                        <li><a href="#" class="menu-link">Sign Up</a></li>
-                    </ul>
-                </nav>
-
-                <!-- Поиск + иконки -->
-                <div class="header-right">
-                    
-                    <!-- Поиск -->
-                    <div class="search-bar">
-                        <input type="text" placeholder="What are you looking for?" id="search-input">
-                        <button type="button" class="search-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Иконки -->
-                    <div class="header-icons">
-                        <a href="#" class="icon-link">
-                            <img src="images/heart small.svg" alt="Wishlist" width="28">
-                        </a>
-                        <a href="#" class="icon-link cart-icon">
-                            <img src="images/Cart1 with buy.svg" alt="Cart" width="28">
-                            <span class="cart-count">0</span>
-                        </a>
-                    </div>
+                <div class="header-icons">
+                    <a href="#" class="icon-link">
+                        <img src="images/Wishlist.svg" alt="Wishlist" width="24">
+                    </a>
+                    <a href="#" class="icon-link cart-icon">
+                        <img src="images/Cart1 with buy.svg" alt="Cart" width="24">
+                    </a>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ============================================== -->
 
-    <main></main>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">iPhone 14 Series</h1>
+                    <p class="hero-subtitle">Up to 10% off on selected items</p>
+                    <a href="#" class="btn btn-primary hero-btn">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero_endframe__cvklg0xk3w6e_large 2.jpg" alt="iPhone 14 Series">
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Скрипт для открытия/закрытия языка по клику -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="logo-footer">Exclusive</h3>
+                    <p class="footer-subtitle">Subscribe</p>
+                    <p class="footer-text">Get 10% off your first order</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <p class="footer-text">111 Bijoy sarani, Dhaka,<br>DH 1516, Bangladesh.</p>
+                    <p class="footer-text">exclusive@gmail.com</p>
+                    <p class="footer-text">+88015-88888-9999</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Account</h4>
+                    <a href="#" class="footer-link">My Account</a>
+                    <a href="#" class="footer-link">Login / Register</a>
+                    <a href="#" class="footer-link">Cart</a>
+                    <a href="#" class="footer-link">Wishlist</a>
+                    <a href="#" class="footer-link">Shop</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Link</h4>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms Of Use</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Download App</h4>
+                    <p class="footer-text small">Save $3 with App New User Only</p>
+                    <div class="app-badges">
+                        <img src="images/Qr Code.svg" alt="QR Code" class="qr-code">
+                        <div class="store-buttons">
+                            <img src="images/download-appstore.jpg" alt="App Store">
+                            <img src="images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.jpg" alt="Google Play">
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/Icon-Facebook.svg" alt="Facebook" width="24"></a>
+                        <a href="#"><img src="images/Icon-Twitter.svg" alt="Twitter" width="24"></a>
+                        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram" width="24"></a>
+                        <a href="#"><img src="images/Icon-Linkedin.svg" alt="LinkedIn" width="24"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© Copyright Rimel 2022. All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS для переключения языка -->
     <script>
-        const dropdown = document.getElementById('languageDropdown');
-        const button = document.getElementById('languageButton');
-        const options = document.getElementById('languageOptions');
+        const langBtn = document.getElementById('language-btn');
+        let currentLang = 'English';
 
-        // Открытие/закрытие по клику
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            dropdown.classList.toggle('active');
-        });
-
-        // Выбор языка
-        options.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function(e) {
-                e.preventDefault();
-                const selectedLang = this.textContent;
-                button.innerHTML = `${selectedLang} <span class="arrow">▼</span>`;
-                dropdown.classList.remove('active');
-            });
-        });
-
-        // Закрытие при клике вне меню
-        document.addEventListener('click', function() {
-            dropdown.classList.remove('active');
+        langBtn.addEventListener('click', () => {
+            if (currentLang === 'English') {
+                currentLang = 'Русский';
+                langBtn.innerHTML = `Русский <span class="arrow">▼</span>`;
+            } else {
+                currentLang = 'English';
+                langBtn.innerHTML = `English <span class="arrow">▼</span>`;
+            }
         });
     </script>
-
 </body>
 </html>

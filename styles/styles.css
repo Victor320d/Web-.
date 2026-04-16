@@ -16,9 +16,7 @@ body {
     padding: 0 20px;
 }
 
-/* ====================== ШАПКА ====================== */
-
-/* Верхняя полоска */
+/* ====================== TOP HEADER ====================== */
 .top-header {
     background-color: #000;
     color: #fff;
@@ -30,86 +28,49 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.top-header p {
+.sale-text {
+    flex: 1;
+    text-align: center;
     margin: 0;
+    font-size: 14px;
+    color: #fff;
 }
 
-.top-header a.shop-now {
+.sale-text a.shop-now {
     color: #fff;
     text-decoration: underline;
     margin-left: 8px;
     font-weight: 600;
 }
 
-/* ====================== ЯЗЫК (по клику) ====================== */
-.language-dropdown {
-    position: relative;
-    display: inline-block;
+/* Переключатель языка */
+.language-switcher {
+    flex-shrink: 0;
 }
 
 .language-current {
     background: transparent;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255,255,255,0.7);
     border-radius: 4px;
-    font-size: 14px;
     padding: 6px 28px 6px 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 6px;
-    outline: none;
+    font-size: 14px;
+    transition: all 0.3s;
 }
 
 .language-current:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.1);
     border-color: #fff;
 }
 
-.arrow {
-    font-size: 12px;
-    transition: transform 0.2s;
-}
-
-.language-dropdown.active .arrow {
-    transform: rotate(180deg);
-}
-
-/* Выпадающий список */
-.language-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    min-width: 120px;
-    z-index: 100;
-    margin-top: 4px;
-}
-
-.language-dropdown.active .language-options {
-    display: block;
-}
-
-.language-option {
-    display: block;
-    padding: 10px 16px;
-    color: #000;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.language-option:hover {
-    background-color: #db4444;
-    color: #fff;
-}
-
-/* Основная шапка */
+/* ====================== MAIN HEADER ====================== */
 .main-header {
     border-bottom: 1px solid #e5e5e5;
     padding: 20px 0;
@@ -121,7 +82,6 @@ body {
     justify-content: space-between;
 }
 
-/* Логотип */
 .logo {
     font-size: 24px;
     font-weight: 700;
@@ -129,7 +89,6 @@ body {
     text-decoration: none;
 }
 
-/* Меню */
 .menu {
     display: flex;
     list-style: none;
@@ -148,14 +107,12 @@ body {
     color: #db4444;
 }
 
-/* Правая часть */
 .header-right {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-/* Поиск */
 .search-bar {
     position: relative;
     width: 300px;
@@ -180,7 +137,6 @@ body {
     padding: 6px;
 }
 
-/* Иконки */
 .header-icons {
     display: flex;
     align-items: center;
@@ -197,17 +153,199 @@ body {
 }
 
 .cart-count {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    background: #db4444;
+    display: none;
+}
+
+/* ====================== HERO ====================== */
+.hero {
+    background-color: #000;
     color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+    padding: 100px 0 120px;   /* увеличил нижний отступ — это и есть «пробел» */
+}
+
+.hero-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.hero-btn {
+    background-color: #DB4444;
+    color: #fff;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ====================== BUTTONS ====================== */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #DB4444;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #c33a3a;
+}
+
+/* ====================== FOOTER ====================== */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.footer-text {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-col-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #DB4444;
+}
+
+/* Subscribe form */
+.subscribe-form {
+    display: flex;
+    margin-top: 8px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 12px 16px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    background: #DB4444;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Download App */
+.app-badges {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.qr-code {
+    width: 80px;
+    height: 80px;
+}
+
+.store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.store-buttons img {
+    height: 38px;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    filter: brightness(0) invert(1);
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #666;
 }
